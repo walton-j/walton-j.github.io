@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">A warmly lit academic study desk</title><desc id="desc">Books, a desk lamp, papers, and a globe in a quiet navy and brown study.</desc>
+<rect width="1200" height="760" fill="#d9cbb8"/><rect y="0" width="1200" height="500" fill="#6f6254"/>
+<rect x="65" y="85" width="490" height="330" rx="3" fill="#342b25" stroke="#a48a63" stroke-width="8"/>
+<g fill="#9d8162"><rect x="90" y="115" width="28" height="265"/><rect x="135" y="105" width="42" height="275"/><rect x="195" y="130" width="30" height="250"/><rect x="243" y="95" width="50" height="285"/><rect x="315" y="120" width="35" height="260"/><rect x="370" y="102" width="54" height="278"/><rect x="448" y="128" width="32" height="252"/></g>
+<rect y="500" width="1200" height="260" fill="#5c4832"/><rect x="120" y="480" width="910" height="35" fill="#332820"/>
+<g><path d="M260 480h250l-35-58H290z" fill="#203764"/><path d="M310 422h230l-30-52H335z" fill="#a48a63"/><path d="M350 370h250l-34-55H380z" fill="#2f4d87"/></g>
+<path d="M725 470c0-150 115-250 245-250" fill="none" stroke="#2c2c2c" stroke-width="23"/><path d="M930 185l105 75-135 35z" fill="#c4ae8a"/><circle cx="730" cy="475" r="55" fill="#2c2c2c"/>
+<ellipse cx="890" cy="370" rx="115" ry="115" fill="#203764" stroke="#a48a63" stroke-width="12"/><path d="M790 370h200M890 255v230M820 290c95 65 95 160 0 220M960 290c-95 65-95 160 0 220" fill="none" stroke="#c4ae8a" stroke-width="8"/>
+<polygon points="220,610 585,570 620,685 255,720" fill="#f4efe7" stroke="#d7d0c8" stroke-width="5"/><path d="M285 625h240M300 650h200M320 675h175" stroke="#6b625a" stroke-width="5"/>
+</svg>

@@ -1,0 +1,6 @@
+---
+const {title='Joseph A. Walton',description='PhD researcher in Operations Research, reinforcement learning, queueing, and simulation-based decision making.',image='/og-image.png',canonical=Astro.url}=Astro.props;
+const fullTitle=title==='Joseph A. Walton'?title:`${title} | Joseph A. Walton`;
+const person={"@context":"https://schema.org","@type":"Person",name:"Joseph A. Walton",url:new URL('/',Astro.site??Astro.url).href,jobTitle:"PhD Researcher",affiliation:{"@type":"CollegeOrUniversity",name:"Missouri University of Science and Technology"},knowsAbout:["Operations Research","Reinforcement Learning","Queueing Theory","Simulation","Sequential Decision Making"]};
+---
+<title>{fullTitle}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta property="og:title" content={fullTitle}/><meta property="og:description" content={description}/><meta property="og:image" content={new URL(image,Astro.site??Astro.url)}/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><script is:inline type="application/ld+json" set:html={JSON.stringify(person)} />

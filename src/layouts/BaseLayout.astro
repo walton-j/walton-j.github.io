@@ -1,0 +1,5 @@
+---
+import Header from '../components/layout/Header.astro'; import Footer from '../components/layout/Footer.astro'; import Seo from '../components/layout/Seo.astro'; import '../styles/global.css';
+const {title,description}=Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="icon" href="/favicon.svg"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><meta name="theme-color" content="#203764"/><Seo title={title} description={description}/></head><body class="min-h-screen bg-cream text-ink"><a class="skip-link" href="#main-content">Skip to content</a><Header/><main id="main-content"><slot/></main><Footer/></body></html>

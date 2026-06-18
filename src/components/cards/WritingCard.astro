@@ -1,0 +1,4 @@
+---
+const {entry}=Astro.props; const {data}=entry;
+---
+<article class="writing-card grid gap-5 border-b border-border py-6 md:grid-cols-[160px_1fr]" data-category={data.category}><div class="flex h-28 items-center justify-center bg-paper font-heading text-4xl text-gold" aria-hidden="true">JW</div><div><p class="font-sans text-[10px] uppercase tracking-wider text-muted">{data.date.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})} · {data.category}</p><h2 class="mt-2 font-heading text-2xl font-semibold text-navy"><a href={`/writing/${entry.id}/`} class="no-underline">{data.title}</a></h2><p class="mt-2 text-sm text-muted">{data.description}</p><a href={`/writing/${entry.id}/`} class="mt-4 inline-block font-sans text-[11px] font-semibold uppercase tracking-wider">Read more →</a></div></article>

@@ -1,0 +1,4 @@
+---
+const {src,downloadHref=src}=Astro.props;
+---
+<div><object data={src} type="application/pdf" class="h-[720px] w-full border border-border bg-paper"><p class="p-6">Your browser cannot display the PDF. <a href={downloadHref}>Download the CV here.</a></p></object><div class="mt-6 flex flex-wrap gap-4"><a href={downloadHref} download class="inline-flex h-12 items-center border border-brown bg-brown px-6 font-sans text-xs font-semibold uppercase tracking-wider text-cream no-underline">Download PDF</a><a href={src} target="_blank" rel="noreferrer" class="inline-flex h-12 items-center border border-navy px-6 font-sans text-xs font-semibold uppercase tracking-wider no-underline">View full screen</a></div></div>

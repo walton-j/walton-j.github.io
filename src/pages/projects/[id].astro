@@ -1,0 +1,25 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import QueueCalculator from '../../components/feature/QueueCalculator.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+interface Props { entry: CollectionEntry<'projects'> }
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+---
+<ProjectLayout frontmatter={entry.data}>
+  <Content />
+  {entry.id === 'queueing-calculator' && <div class="mt-10"><QueueCalculator /></div>}
+  <section class="mt-12 grid gap-6 md:grid-cols-2">
+    <div><h2 class="font-heading text-3xl text-navy">Methods</h2><ul class="mt-3 list-disc pl-5">{entry.data.methods.map((method) => <li>{method}</li>)}</ul></div>
+    <div><h2 class="font-heading text-3xl text-navy">Links</h2><ul class="mt-3 space-y-2">{entry.data.links.demo && <li><a href={entry.data.links.demo}>Live demo</a></li>}{entry.data.links.github && <li><a href={entry.data.links.github}>Source code</a></li>}{entry.data.links.pdf && <li><a href={entry.data.links.pdf}>Technical report</a></li>}</ul></div>
+  </section>
+</ProjectLayout>

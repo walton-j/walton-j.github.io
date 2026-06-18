@@ -1,0 +1,6 @@
+import { defineCollection, z } from "astro:content";
+import { glob, file } from "astro/loaders";
+const writing=defineCollection({loader:glob({pattern:"**/*.{md,mdx}",base:"./src/content/writing"}),schema:z.object({title:z.string(),description:z.string(),date:z.coerce.date(),category:z.string(),tags:z.array(z.string()).default([]),draft:z.boolean().default(false),image:z.string().optional()})});
+const projects=defineCollection({loader:glob({pattern:"**/*.{md,mdx}",base:"./src/content/projects"}),schema:z.object({title:z.string(),subtitle:z.string(),description:z.string(),status:z.enum(["concept","prototype","active","archived"]),featured:z.boolean().default(false),methods:z.array(z.string()).default([]),links:z.object({demo:z.string().optional(),github:z.string().optional(),pdf:z.string().optional()}).default({})})});
+const publications=defineCollection({loader:file("src/content/publications/publications.json"),schema:z.object({id:z.string(),title:z.string(),authors:z.array(z.string()),venue:z.string(),year:z.number(),type:z.string(),status:z.string(),abstract:z.string(),links:z.object({pdf:z.string().optional(),code:z.string().optional(),bibtex:z.string().optional()}).default({}),featured:z.boolean().default(false)})});
+export const collections={writing,projects,publications};

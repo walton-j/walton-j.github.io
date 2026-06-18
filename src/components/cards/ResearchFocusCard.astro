@@ -1,0 +1,4 @@
+---
+const {icon='◇',title,body,href='/research'}=Astro.props;
+---
+<article class="flex h-full gap-5 border border-border p-cardPad"><div class="font-heading text-4xl text-gold" aria-hidden="true">{icon}</div><div><h3 class="font-heading text-2xl font-semibold text-navy">{title}</h3><p class="mt-2 text-sm text-muted">{body}</p><a href={href} class="mt-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-wider">View related work →</a></div></article>

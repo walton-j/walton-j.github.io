@@ -1,0 +1,4 @@
+---
+const {href,variant='primary',download=false}=Astro.props; const classes=variant==='primary'?'bg-brown text-cream border-brown hover:bg-navy hover:text-cream':'border border-navy text-navy hover:bg-paper';
+---
+<a href={href} download={download||undefined} class={`inline-flex h-12 items-center justify-center border px-6 font-sans text-xs font-semibold uppercase tracking-[.12em] no-underline transition ${classes}`}><slot/></a>

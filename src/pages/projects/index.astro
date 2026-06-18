@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import ProjectCard from '../../components/cards/ProjectCard.astro'; import {getCollection} from 'astro:content'; const projects=await getCollection('projects'); const icons=['⌁','◎','⚙','◇','▥'];
+---
+<BaseLayout title="Projects" description="Research demos, operations calculators, simulation models, optimization prototypes, and teaching tools."><section class="mx-auto max-w-site px-pageX py-sectionY"><h1 class="font-heading text-5xl font-medium text-navy">Projects</h1><p class="mt-4 max-w-2xl">Projects that combine theory, computation, and simulation to solve real-world decision problems.</p><div class="mt-10 grid gap-gridGap md:grid-cols-2">{projects.map((p,i)=><ProjectCard title={p.data.title} description={p.data.description} status={p.data.status} icon={icons[i%icons.length]} href={`/projects/${p.id}/`}/>)}</div></section></BaseLayout>
